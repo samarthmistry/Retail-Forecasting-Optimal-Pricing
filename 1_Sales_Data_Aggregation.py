@@ -1,4 +1,4 @@
-################################################## 0: import modules, create Spark Context and define functions
+################################################## 0: import modules
 import os
 import numpy as np
 from datetime import datetime, timedelta
@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 from pandas.io.json import json_normalize
 from functools import reduce
 
-################################################## 1: define paths of input files and output files
+################################################## 1: define paths
 ## input paths
 sales_and_pc_raw_d_loc = "D:/samarth/Desktop/PriceOp/Project/rawdata/"
 products_d_loc = "D:/samarth/Desktop/PriceOp/Project/publicparameters/products.csv"
@@ -20,7 +20,7 @@ df_sales_loc = "D:/samarth/Desktop/PriceOp/Project/aggregated_sales_data/"
 df_stores_loc = "D:/samarth/Desktop/PriceOp/Project/publicparameters/stores_processed"
 
 ################################################## 2: data aggregation
-########################## 2.1 read in products, stores, sales, price_changes data from Data Lake
+########################## 2.1 read in products, stores, sales, price_changes data
 ## get the start date and end date of the current sales cycle
 with open(processed_time_d_loc) as f:
     processed_time_d = csv.reader(f, delimiter=',')
